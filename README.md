@@ -1,10 +1,12 @@
 # Clinical AI Reliability
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23127294.svg)](https://doi.org/10.5281/zenodo.23127294)
+
 **Clinical AI Reliability (CAR)** is an experimental, open-source framework for producing a structured **Reliability Envelope** around outputs from medical and health AI systems.
 
 Instead of treating a model response as a standalone answer, CAR records the information needed to inspect it: claim-level evidence links, evidence freshness, uncertainty declarations, counterfactual test results, contradictions, provenance, and human-review triggers.
 
-> **Status:** early research software, v0.1.0 foundation.
+> **Status:** early research software, v0.1.1.
 
 ## Why this project exists
 
