@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: "Chowdhury Tithi"
     given-names: "Sabrina"
-version: 0.1.0
-date-released: 2026-10-03
+version: 0.1.1
+date-released: 2026-10-04
 repository-code: "https://github.com/DocTithi/clinical-ai-reliability"
 license: Apache-2.0
 abstract: "An experimental open-source reliability envelope protocol for medical and health AI systems."
