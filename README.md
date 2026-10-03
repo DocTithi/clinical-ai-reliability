@@ -1,6 +1,10 @@
 # Clinical AI Reliability
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23127294.svg)](https://doi.org/10.5281/zenodo.23127294)
+[![CI](https://github.com/DocTithi/clinical-ai-reliability/actions/workflows/ci.yml/badge.svg)](https://github.com/DocTithi/clinical-ai-reliability/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/clinical-ai-reliability.svg)](https://pypi.org/project/clinical-ai-reliability/)
+[![Python](https://img.shields.io/pypi/pyversions/clinical-ai-reliability.svg)](https://pypi.org/project/clinical-ai-reliability/)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 **Clinical AI Reliability (CAR)** is an experimental, open-source framework for producing a structured **Reliability Envelope** around outputs from medical and health AI systems.
 
