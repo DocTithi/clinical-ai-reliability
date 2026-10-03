@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DocTithi/clinical-ai-reliability/schemas/reliability-envelope-v0.1.schema.json",
+  "title": "Clinical AI Reliability Envelope v0.1",
+  "type": "object",
+  "required": [
+    "protocol_version",
+    "run_id",
+    "created_at",
+    "protocol_status",
+    "metrics",
+    "flags",
+    "claims",
+    "evidence",
+    "counterfactuals",
+    "provenance",
+    "policy"
+  ],
+  "properties": {
+    "protocol_version": {
+      "const": "0.1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^car_[0-9a-f]{16}$"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "protocol_status": {
+      "enum": [
+        "protocol_complete",
+        "review_recommended",
+        "review_required"
+      ]
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "counterfactuals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "model_name",
+        "model_version",
+        "input_sha256",
+        "output_sha256",
+        "model_metadata_sha256",
+        "raw_input_stored",
+        "raw_output_stored"
+      ],
+      "properties": {
+        "model_name": {
+          "type": "string"
+        },
+        "model_version": {
+          "type": "string"
+        },
+        "model_provider": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "input_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "output_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "prompt_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_metadata_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "raw_input_stored": {
+          "const": false
+        },
+        "raw_output_stored": {
+          "const": false
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

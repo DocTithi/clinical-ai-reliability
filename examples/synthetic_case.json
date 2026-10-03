@@ -1,0 +1,47 @@
+{
+  "model": {
+    "name": "synthetic-demo-model",
+    "version": "0.0",
+    "provider": "example-only"
+  },
+  "input_text": "Synthetic case: adult with a fictional presentation used only to demonstrate the protocol.",
+  "output_text": "Claim A is supported by a current guideline. Claim B requires human review.",
+  "prompt": "Synthetic evaluation prompt.",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Synthetic Claim A.",
+      "evidence_ids": ["e1"],
+      "support_assessment": "supported",
+      "uncertainty": 0.12,
+      "high_stakes": false
+    },
+    {
+      "id": "c2",
+      "text": "Synthetic Claim B.",
+      "evidence_ids": ["e1"],
+      "support_assessment": "partial",
+      "uncertainty": 0.42,
+      "high_stakes": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e1",
+      "title": "Synthetic Guideline",
+      "source_type": "guideline",
+      "published_at": "2026-01-15",
+      "superseded": false,
+      "url": "https://example.org/synthetic-guideline"
+    }
+  ],
+  "counterfactuals": [
+    {
+      "id": "cf1",
+      "description": "Synthetic clinically meaningful perturbation.",
+      "expected_relation": "change",
+      "observed_relation": "change",
+      "rationale": "Demonstrates relation-based counterfactual evaluation."
+    }
+  ]
+}

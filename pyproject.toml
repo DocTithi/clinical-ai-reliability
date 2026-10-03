@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinical-ai-reliability"
+version = "0.1.0"
+description = "An open-source reliability envelope protocol for medical and health AI systems."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Sabrina Chowdhury Tithi"}]
+keywords = ["medical-ai", "health-ai", "ai-safety", "reliability", "provenance", "counterfactuals"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Medical Science Apps."
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "jsonschema>=4"]
+
+[project.scripts]
+car-evaluate = "clinical_ai_reliability.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/DocTithi/clinical-ai-reliability"
+Repository = "https://github.com/DocTithi/clinical-ai-reliability"
+Issues = "https://github.com/DocTithi/clinical-ai-reliability/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
