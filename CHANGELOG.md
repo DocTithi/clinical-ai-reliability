@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1] - 2026-10-04
+
+### Changed
+
+- Updated package, internal, and citation metadata to version 0.1.1.
+- Prepared the project for archival and DOI registration through Zenodo.
+
 ## [0.1.0] - 2026-10-03
 
 ### Added
